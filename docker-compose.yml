@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  nano_crm:
+    build: .
+    restart: always
+    volumes:
+      - ./data:/app/data
+    env_file:
+      - .env
+    ports:
+      - "8081:8080"
